@@ -1,7 +1,5 @@
 # Studio Worktops
 
-![Studio Worktops Logo](public/images/Studio Worktops Compressed Imagery/studiologo.PNG)
-
 A modern, responsive website for **Studio Worktops**, showcasing a wide range of kitchen worktops, decors, and sample ordering functionality. Designed for both desktop and mobile users with a focus on user experience and visual appeal.
 
 ---
