@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Worktops - Texture</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #829795;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.texture-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligns cards from left to right */
+    gap: 15px; /* Consistent gap between cards */
+    width: 100%; /* Ensures the container takes up full width */
+    box-sizing: border-box; /* Ensures the container respects padding */
+    padding: 15px 10px; /* Keeps consistent padding */
+}
+
+.texture-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(20% - 15px); /* Ensures 5 cards per row with a gap */
+    aspect-ratio: 1 / 1; /* Ensures the cards are square-shaped */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    min-height: 250px; /* Ensures all cards are the same height */
+}
+
+.texture-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.texture-banner {
+    width: 100%;
+    height: 80%; /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texture-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.texture-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 5px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+.texture-description {
+    font-size: 11px;
+    color: #777;
+    padding: 0 5px 5px; /* Reduced padding to reduce space */
+    margin: 0; /* Removed margin to reduce space further */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Let height adjust automatically based on content */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 1024px) {
+    .texture-card {
+        width: calc(25% - 15px); /* 4 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .texture-card {
+        width: calc(33.33% - 15px); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .texture-card {
+        width: calc(50% - 15px); /* 2 cards per row */
+    }
+}
+
+
+
+</style>
+<body>
+    <section class="subhead">
+        <nav class="navbar">
+            <!-- Logo image -->
+            <div class="logo" style="overflow: hidden; position: relative; width: 200px; height: 100px; padding: 10px; flex-shrink: 0;">
+                <a href="index.html">
+                    <img src="images/Studio Worktops Compressed Imagery/studiologo.PNG" alt="Finesse Worktops Logo" style="width: 200px; height: 100px; object-fit: cover;">
+                </a>
+            </div>
+    
+            <!-- Burger Menu Icon -->
+            <div id="burger-menu" onclick="toggleMenu()" style="cursor: pointer; font-size: 28px; padding: 10px; display: none;">
+                <i class="fas fa-bars"></i>
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul id="nav-links" style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; flex-grow: 1; justify-content: center;">
+                <li style="position: relative; margin-right: 20px; text-align: center;">
+                    <a href="index.html" style="text-decoration: none; display: inline-block; padding: 10px;">Decors</a>
+                    <div class="dropdown" style="display: none; position: absolute; top: 80%; left: 50%; transform: translateX(-50%); background-color: #afcc46; width: 180px; border-radius: 4px; overflow: hidden; text-align: center;">
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin: 0; padding: 0;">
+                                <a href="decors.html?category=round-edge" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Round Edge</a>
+                                <a href="decors.html?category=abssquare" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Square Edge</a>                                
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                
+                
+                
+                
+                
+                <li style="margin-right: 20px;"><a href="stylewithdurability.html" style="text-decoration: none;">Style with Durability</a></li>
+                <li style="margin-right: 20px;"><a href="loveyourprofile.html" style="text-decoration: none;">Profiles</a></li>
+                <li style="margin-right: 20px;"><a href="finishingtouches.html" style="text-decoration: none;">Accessories</a></li>
+                <li style="margin-right: 20px;"><a href="care.html" style="text-decoration: none;">Care</a></li>
+                <li style="margin-right: 20px;"><a href="specifications.html" style="text-decoration: none;">Specification</a></li>
+                <li><a href="decors.html" style="text-decoration: none;">Order Sample</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Banner Logo (Centered) -->
+        <div class="banner-logo">
+            <img src="images/Studio Worktops Compressed Imagery/5580 DP Chepe (Kaindl)_Main.jpg" alt="Finesse Worktops Banner" class="header-logo">
+        </div>
+    </section>
+
+    <main>
+
+        <h1 style="color: #afcc46;">Our Texture Collection</h1>
+        <div class="texture-container">
+            <!-- Bureau Smooth -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/BS-Bureau-Structure.jpg');"></div>
+                <p class="texture-name">Bureau Structure (BS)</p>
+                <p class="texture-description">A pleasant mottled surface, that brings timeless style and durability to all environments.</p>
+            </div>
+        
+            <!-- Slate -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/SL-Slate.jpg');"></div>
+                <p class="texture-name">Slate (SL)</p>
+                <p class="texture-description">Deep slate texture that reflects the distinctive look and feel of weathered stone.</p>
+            </div>
+        
+            <!-- Fine Pore -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/FP-Fine-Pore.jpg');"></div>
+                <p class="texture-name">Fine Pore (FP)</p>
+                <p class="texture-description">An understated delicate wood pore that refines the decor.</p>
+            </div>
+        
+            <!-- Rough Stone -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/RS-Rough-Stone.jpg');"></div>
+                <p class="texture-name">Rough Stone (RS)</p>
+                <p class="texture-description">Soft riven texture, perfectly accompanying our natural stone decors.</p>
+            </div>
+        
+            <!-- Glitter Matt -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/GM-300x300.jpg');"></div>
+                <p class="texture-name">Glitter Matt (GM)</p>
+                <p class="texture-description">This elegant matt texture combines a soft, silky touch with the subtle sparkle of aluminum flecks.</p>
+            </div>
+        
+            <!-- Rust -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/RT-Rust.jpg');"></div>
+                <p class="texture-name">Rust (RT)</p>
+                <p class="texture-description">The stucco texture echoes the distressed appearance of concrete and metal.</p>
+            </div>
+        
+            <!-- Pearl -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/PE-Pearl.jpg');"></div>
+                <p class="texture-name">Pearl (PE)</p>
+                <p class="texture-description">A subtle, burnished surface detail.</p>
+            </div>
+        
+            <!-- Rift Wood -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/RW-River-Wood-300x300.jpg');"></div>
+                <p class="texture-name">Rift Wood (RW)</p>
+                <p class="texture-description">Linear texture with matt and gloss areas for authentic, high-value wood designs.</p>
+            </div>
+        
+            <!-- Pluton -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/PN-Pluton.jpg');"></div>
+                <p class="texture-name">Pluton (PN)</p>
+                <p class="texture-description">A versatile texture with a matt effect ideal for various surfaces.</p>
+            </div>
+        
+            <!-- Super Matt -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/SU-Super-Matt.jpg');"></div>
+                <p class="texture-name">Super Matt (SU)</p>
+                <p class="texture-description">A texture combining matt effect with smooth, high-grade optics for a resplendent appearance.</p>
+            </div>
+        
+            <!-- Used Effect -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/UE-Used-Effect.jpg');"></div>
+                <p class="texture-name">Used Effect (UE)</p>
+                <p class="texture-description">A burnished surface finish, adding an extra degree of patina to stone and metal decors.</p>
+            </div>
+        
+            <!-- Super Quality Gloss -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/SQ-Super-Quality-Gloss.jpg');"></div>
+                <p class="texture-name">Super Quality Gloss (SQ)</p>
+                <p class="texture-description">A superior gloss surface specially developed for worktops to offer improved scratch resistance and durability.</p>
+            </div>
+        
+            <!-- Patina -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/PA-Patina.jpg');"></div>
+                <p class="texture-name">Patina (PA)</p>
+                <p class="texture-description">A subtle, semi-smooth glazed surface.</p>
+            </div>
+        
+            <!-- Glitter Gloss -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/GG-Glitter-Gloss.jpg');"></div>
+                <p class="texture-name">Glitter Gloss (GG)</p>
+                <p class="texture-description">High gloss surface, enhanced with a fine amount of shiny real aluminum bits and a sparkling glitter finish.</p>
+            </div>
+        
+            <!-- Palazzo Touch -->
+            <div class="texture-card">
+                <div class="texture-banner" style="background-image: url('images/Studio Worktops Compressed Imagery/PH-Peetah-300x300.jpg');"></div>
+                <p class="texture-name">Palazzo Touch (PH)</p>
+                <p class="texture-description">Inspired by vintage marble and soapstone textures, this dual gloss surface replicates natural cracks and indentations.</p>
+            </div>
+        </div>
+        
+        
+
+       
+        <div id="orderModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Order a Sample</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <!-- Order Date (Read-Only) -->
+                        <label for="orderDate">Order Date:</label>
+                        <input type="date" id="orderDate" class="form-control" readonly>
+        
+                        <!-- Billing Information Fields -->
+                        <label for="billingfirstname">Billing First Name:</label>
+                        <input type="text" id="billingfirstname" class="form-control" required>
+        
+                        <label for="billinglastname">Billing Last Name:</label>
+                        <input type="text" id="billinglastname" class="form-control" required>
+        
+                        <label for="billingaddress1">Billing Address 1:</label>
+                        <input type="text" id="billingaddress1" class="form-control" required>
+        
+                        <label for="billingaddress2">Billing Address 2:</label>
+                        <input type="text" id="billingaddress2" class="form-control">
+        
+                        <label for="billingcity">Billing City:</label>
+                        <input type="text" id="billingcity" class="form-control" required>
+        
+                        <label for="billingpostcode">Billing Postcode:</label>
+                        <input type="text" id="billingpostcode" class="form-control" required>
+        
+                        <label for="sku1">SKU:</label>
+                        <input type="text" id="sku1" class="form-control">
+        
+                        <label for="billingemailaddress">Email Address:</label>
+                        <input type="email" id="billingemailaddress" class="form-control" required>
+        
+                        <label for="billingphone">Phone Number:</label>
+                        <input type="text" id="billingphone" class="form-control" required>
+                        <button type="submit" id="submitorder" class="custom-button">Submit Sample</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <p style="color: #fff;">&copy; 2024 Studio Worktops. All rights reserved.</p>
+    </footer>
+
+</body>
+
+<script src="js/scripts.js"></script>
+<script> // Add event listener to the "Order a Sample" buttons
+    document.querySelectorAll('.order-button').forEach(function(button) {
+           button.addEventListener('click', function() {
+               // Get SKU and SKU code from button data attributes
+               const skuName = this.getAttribute('data-sku');
+               const skuCode = this.getAttribute('data-sku-code');
+               
+               // Update modal content
+               document.getElementById('sku1').value = skuCode;  // Update SKU code in the modal input
+               document.getElementById('sku1').placeholder = skuName;  // Update SKU name in the placeholder
+               
+               // Show the modal
+               document.getElementById('orderModal').style.display = 'block';
+           });
+       });
+   
+       // Optionally, add functionality to close the modal (this can be triggered by a button or outside click)
+       document.querySelector('.modal-close')?.addEventListener('click', function() {
+           document.getElementById('orderModal').style.display = 'none';
+       });
+   
+       // Close modal when clicking outside of the modal content
+       window.addEventListener('click', function(event) {
+           if (event.target === document.getElementById('orderModal')) {
+               document.getElementById('orderModal').style.display = 'none';
+           }
+       });
+   </script>
+
+</html>

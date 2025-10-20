@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Worktops - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<style>
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card-p {
+    max-height: 80px;
+    overflow: hidden;
+    position: relative;
+}
+
+.more-text {
+    display: none;
+}
+
+.card.expanded .card-p {
+    max-height: none;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: #007BFF;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.category {
+    color: #ffffff !important; /* Ensures text is always white */
+    font-weight: bold; /* Optional: Makes it stand out */
+}
+
+
+
+/* Heading styling to keep it on one line */
+.card h4 {
+    margin: 10px 0; 
+    font-size: 0.5rem; 
+    color: #afcc46; 
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Hides the overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if the text is too long */
+}
+
+
+.card img {
+    width: 100%; /* Ensures the image takes up the full width of the card */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the entire area, maintaining aspect ratio */
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card h4 {
+    margin: 10px 0; 
+    font-size: 1.1rem; 
+    color: #afcc46; 
+}
+
+.card .sku {
+    font-size: 0.9rem; 
+    color: #666; 
+}
+
+.card .description {
+    font-size: 0.9rem; /* Ensure consistent font size */
+    color: #444; /* Slightly darker for readability */
+    line-height: 1.0; /* Add spacing for readability */
+    height: 130px; /* Set a fixed height for uniform description length */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for truncated text */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+</style>
+
+<body>
+
+    <section class="subhead">
+        <nav class="navbar">
+            <!-- Logo image -->
+            <div class="logo" style="overflow: hidden; position: relative; width: 200px; height: 100px; padding: 10px; flex-shrink: 0;">
+                <a href="index.html">
+                    <img src="images/Studio Worktops Compressed Imagery/studiologo.PNG" alt="Finesse Worktops Logo" style="width: 200px; height: 100px; object-fit: cover;">
+                </a>
+            </div>
+    
+            <!-- Burger Menu Icon -->
+            <div id="burger-menu" onclick="toggleMenu()" style="cursor: pointer; font-size: 28px; padding: 10px; display: none;">
+                <i class="fas fa-bars"></i>
+            </div>
+    
+            <!-- Navigation Links -->
+            <ul id="nav-links" style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; flex-grow: 1; justify-content: center;">
+                <li style="position: relative; margin-right: 20px; text-align: center;">
+                    <a href="index.html" style="text-decoration: none; display: inline-block; padding: 10px;">Decors</a>
+                    <div class="dropdown" style="display: none; position: absolute; top: 80%; left: 50%; transform: translateX(-50%); background-color: #afcc46; width: 180px; border-radius: 4px; overflow: hidden; text-align: center;">
+                        <ul style="list-style-type: none; padding: 0; margin: 0;">
+                            <li style="margin: 0; padding: 0;">
+                                <a href="decors.html?category=round-edge" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Round Edge</a>
+                                <a href="decors.html?category=abssquare" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Square Edge</a>                                
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li style="margin-right: 20px;"><a href="stylewithdurability.html" style="text-decoration: none;">Style with Durability</a></li>
+                <li style="margin-right: 20px;"><a href="loveyourprofile.html" style="text-decoration: none;">Profiles</a></li>
+                <li style="margin-right: 20px;"><a href="finishingtouches.html" style="text-decoration: none;">Accessories</a></li>
+                <li style="margin-right: 20px;"><a href="care.html" style="text-decoration: none;">Care</a></li>
+                <li style="margin-right: 20px;"><a href="specifications.html" style="text-decoration: none;">Specification</a></li>
+                <li><a href="decors.html" style="text-decoration: none;">Order Sample</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Banner Logo (Centered) -->
+        <div class="banner-logo">
+            <img src="images/Studio Worktops Compressed Imagery/5580 DP Chepe (Kaindl)_Main.jpg" alt="Finesse Worktops Banner" class="header-logo">
+        </div>
+    </section>
+    <main>
+        <section id="wood">
+            <h1>Order a Sample</h1>
+            <p>To ensure you select the perfect product for your needs, we recommend ordering samples before making your final decision. Screen displays can vary,<br> making physical samples the best way to evaluate true colours and qualities. </p>
+            <p>Please complete the form below to request samples or make any other enquiries. Sample orders placed today will be delivered within 48 working hours.</p>  
+      
+            <div class="filter-section">
+                <h1 style="color: #afcc46;">Sort by:</h1>
+                <select id="sort-by" onchange="sortCards()">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                </select>
+            
+                <h3 style="color: #afcc46;">Filter by Category:</h3>
+                <select id="category-filter" onchange="filterCards()">
+                    <option value="all">Entire Product Range</option>
+                    <option value="abssquare">ABS Square Edge</option> <!-- Added ABS Square Edge as "abssquare" -->
+                    <option value="round-edge">Round Edge</option>
+                </select>
+            </div>
+            
+            
+            
+        
+            <div class="card-container">
+
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/4374 Concrete Art Opal Grey.jpg" alt="Wood Decor 2">
+                    <h4>4374 / DP / Concrete Art Opal Grey</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="4374 DP - Concrete Art Opal Grey " data-sku-code="4374 DP">Order a Sample</button>
+                </div>
+
+
+                
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/5414 Oak Endgrain Classic.jpg" alt="Wood Decor 2">
+                    <h4>5414 / AW / Oak Endgrain Classic</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="5414 AW Oak Endgrain Classic" data-sku-code="5414 AW">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/4892 Pietra Grey.jpg" alt="Wood Decor 2">
+                    <h4>4892 / GL / Pietra Grey</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="4892 GL Pietra Grey" data-sku-code="4892 GL">Order a Sample</button>
+                </div>
+
+                
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K201 Dark Grey Concrete.jpg" alt="Wood Decor 2">
+                    <h4>K201 / RT / Dark Grey Concrete</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="K201 RT Dark Grey Concrete" data-sku-code="5413  AW ">Order a Sample</button>
+                </div>
+
+                          
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K023 Venato.jpg" alt="Wood Decor 2">
+                    <h4>K023 / SU / Venato</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+
+                
+                    <button class="order-button" data-sku="K023 SU Venato" data-sku-code="K023 SU">Order a Sample</button>
+                </div>
+                
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/whitesparkle.jpg" alt="Wood Decor 2">
+                    <h4>8681 / SQ / White Sparkle</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="8681 SQ White Sparkle" data-sku-code="8681  SQ  ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/0500 Antique White.jpg" alt="Wood Decor 2">
+                    <h4>0500 / PE / Antique White</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="0500 PE Antique White" data-sku-code="0500  PE ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/5413 Oak Endgrain Cognac.jpg" alt="Wood Decor 2">
+                    <h4>5413 / AW / Oak Endgrain Cognac</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="5413 AW Oak Endgrain Cognac " data-sku-code="5413 AW ">Order a Sample</button>
+                </div>
+                
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/2360 Oak Castell.jpg" alt="Wood Decor 2">
+                    <h4>2360 / AN / Oak Castell</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="2360 AN Oak Castell" data-sku-code="4895 DP">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/4895 Atlantic Stone Graphite.jpg" alt="Wood Decor 2">
+                    <h4>4895 / DP / Atlantic Stone Graphite</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="4895 DP - Atlantic Stone Graphite" data-sku-code="4895 DP">Order a Sample</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/5580 Chepe.jpg" alt="Wood Decor 2">
+                    <h4>5580 / DP / Chepe</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="5580 DP Chepe" data-sku-code="5580 DP Chepe ">Order a Sample</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/4038 Sonoma Oak.jpg" alt="Wood Decor 2">
+                    <h4>4038 / AT / Sonoma Oak</h4>
+                    <p style="color: #fff;">abssquare</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="4038 AT Sonoma Oak" data-sku-code="4038 AT ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K023 Venato.jpg" alt="Wood Decor 2">
+                    <h4>K023 / SQ / Venato
+                        </h4>
+                        <p style="color: #fff;">sstone</p>
+                        <button class="order-button" data-sku="Venato K023 SQ" data-sku-code="K023 SQ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K207 Grey Galaxy.jpg" alt="Wood Decor 2">
+                    <h4>K207 / RS / Grey Galaxy</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="Grey Galaxy - K207 RS" data-sku-code="K207 RS">Order a Sample</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/5527 Stone Oak.jpg" alt="Wood Decor 2">
+                    <h4>5527 / FP / Stone Oak</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku=" 5527 FP –  Stone Oak" data-sku-code="5527 FP">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K206 Porterhouse Walnut.jpg" alt="Wood Decor 2">
+                    <h4>K206 / PE / Porterhouse Walnut</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="K206 PE Porterhouse Walnut " data-sku-code="K206 PE">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/4887 Walnut Almond Expressive.jpg" alt="Wood Decor 2">
+                    <h4>4887 / AN / Walnut Almond Expressive</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku=" 4887 AN - Walnut Almond Expressive" data-sku-code="4887 AN ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/5518 Jet.jpg" alt="Wood Decor 2">
+                    <h4>5518 / BS / Jet</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="5518 - BS Jet " data-sku-code="5518 BS ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K210 Black Flint.jpg" alt="Wood Decor 2">
+                    <h4>K210 / PE / Black Flint</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="K210 PE Black Flint" data-sku-code="K210 PE ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K210 Black Flint.jpg" alt="Wood Decor 2">
+                    <h4>K210 / SQ / Black Flint</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="K210 SQ Black Flint" data-sku-code="K210 SQ ">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/5284 Oak Roosevelt.jpg" alt="Wood Decor 2">
+                    <h4>5284 / AN / Oak Roosevelt</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="5284 AN - Oak Roosevelt " data-sku-code="5527 FP">Order a Sample</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K204 Classic Granite.jpg" alt="Wood Decor 2">
+                    <h4>K204 / PE / Classic Granite</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+
+                        <button class="order-button" data-sku="Classic Granite – K204 PE" data-sku-code="K204 PE">Order a Sample</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K218 Black Andromeda.jpg" alt="Wood Decor 2">
+                    <h4>K218 / GG / Black Andromeda</h4>
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="Black Andromeda – K218 GG" data-sku-code="K218 GG">Order a Sample</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/Studio Worktops Compressed Imagery/K209 Crema Limestone.jpg" alt="Wood Decor 2">
+                    <h4>K209 / RS / Crema Limestone</h4>
+
+                    <p style="color: #fff;">round-edge</p> <!-- The edge type is listed here -->
+                        <button class="order-button" data-sku="Crema Limestone – K209 RS" data-sku-code="K209 RS">Order a Sample</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <p style="color: #fff;">&copy; 2024 Studio Worktops. All rights reserved.</p>
+    </footer>
+
+    <div id="orderModal" class="modal" style="display:none;">
+        <div class="modal-content" style="max-width: 500px; margin: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            <div class="modal-header" style="background-color: #f4f4f4; padding: 15px; border-bottom: 1px solid #ddd;">
+                <h5 style="margin: 0; font-size: 18px; color: #333;">Order a Sample</h5>
+            </div>
+            <div class="modal-body" style="padding: 15px;">
+                <p style="font-size: 14px; color: #555;">
+                    To order a sample, please contact 
+                    <a href="mailto:finesse@kronospan.co.uk" style="color: #007bff; text-decoration: none;">
+                        studio@kronospan.co.uk
+                    </a> 
+                    with the following details:
+                </p>
+                <ul style="padding-left: 20px; font-size: 14px; color: #555; line-height: 1.6;">
+                    <li>Sample Name</li>
+                    <li>Full Name</li>
+                    <li>Delivery Address (including postcode)</li>
+                    <li>Preferred Contact Number</li>
+                    <li>Email Address</li>
+                    <li>
+                        SKU: <span id="sku1" style="font-size: 14px; color: #555;"></span> <!-- Dynamic SKU displayed here -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script>
+    // Function to toggle the visibility of the navigation menu
+    function toggleMenu() {
+        var nav = document.getElementById("nav-links");
+        if (nav.style.display === "none" || nav.style.display === "") {
+            nav.style.display = "flex";  // Show the navigation links
+        } else {
+            nav.style.display = "none";  // Hide the navigation links
+        }
+    }
+
+    function filterCards() {
+    const filterValue = document.getElementById('category-filter').value.toLowerCase(); // Get the selected filter value and make it lowercase
+    const cards = document.querySelectorAll('.card'); // Get all cards
+
+    cards.forEach(card => {
+        const categoryParagraph = card.querySelector('p'); // Find the <p> element inside the card
+        const categoryText = categoryParagraph.textContent.trim().toLowerCase(); // Get and normalize its text content
+
+        // Filter for the specified category or edge type (matching the exact text like "abssquare")
+        if (filterValue === 'all' || categoryText.includes(filterValue)) {
+            card.style.display = 'block'; // Show the card
+        } else {
+            card.style.display = 'none'; // Hide the card
+        }
+    });
+
+    sortCards(); // Sort the filtered cards after filtering
+}
+
+
+function sortCards() {
+    const sortBy = document.getElementById('sort-by').value; // Get sorting preference
+    const container = document.querySelector('.card-container'); // Get the container holding all cards
+    const cards = Array.from(document.querySelectorAll('.card')); // Convert NodeList to an Array
+
+    // Sort cards based on the selected sorting preference
+    if (sortBy === 'name-asc') {
+        // Sort cards alphabetically (A-Z) by the text content of the <h4> tag (product name)
+        cards.sort((a, b) => {
+            const titleA = a.querySelector('h4').textContent.trim().toLowerCase();
+            const titleB = b.querySelector('h4').textContent.trim().toLowerCase();
+            return titleA.localeCompare(titleB); // Compare titles alphabetically (A-Z)
+        });
+    } else if (sortBy === 'name-desc') {
+        // Sort cards alphabetically (Z-A) by the text content of the <h4> tag (product name)
+        cards.sort((a, b) => {
+            const titleA = a.querySelector('h4').textContent.trim().toLowerCase();
+            const titleB = b.querySelector('h4').textContent.trim().toLowerCase();
+            return titleB.localeCompare(titleA); // Reverse comparison for Z-A
+        });
+    }
+
+    // Append the sorted cards back to the container
+    cards.forEach(card => container.appendChild(card)); // This doesn't change the layout
+}
+
+// Initialize the page by showing all cards on load
+window.onload = () => {
+    filterCards(); // Display all cards initially
+};
+
+
+window.onload = function () {
+    // Get the category from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get('category');
+
+    // If a category is found, update the dropdown and apply filtering
+    if (selectedCategory) {
+        document.getElementById('category-filter').value = selectedCategory;
+        filterCards(); // Apply filtering
+    }
+};
+
+
+document.querySelectorAll('.order-button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Get SKU name and SKU code from button data attributes
+        const skuName = this.getAttribute('data-sku');  // The name like "Stone Oak"
+        
+        // Update modal content with SKU name only (no SKU code)
+        document.getElementById('sku1').textContent = skuName;  // Only show SKU name
+
+        // Show the modal
+        document.getElementById('orderModal').style.display = 'block';
+    });
+});
+
+// Optionally, add functionality to close the modal (this can be triggered by a button or outside click)
+document.querySelector('.modal-close')?.addEventListener('click', function() {
+    document.getElementById('orderModal').style.display = 'none';
+});
+
+// Close modal when clicking outside of the modal content
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('orderModal')) {
+        document.getElementById('orderModal').style.display = 'none';
+    }
+});
+
+
+    // Detect screen width to handle burger menu visibility
+    window.addEventListener('resize', function() {
+        var burgerMenu = document.getElementById('burger-menu');
+        var navLinks = document.getElementById('nav-links');
+        if (window.innerWidth > 768) {
+            burgerMenu.style.display = 'none';  // Hide burger icon on large screens
+            navLinks.style.display = 'flex';    // Show navigation links horizontally
+        } else {
+            burgerMenu.style.display = 'block';  // Show burger icon on small screens
+            navLinks.style.display = 'none';     // Hide navigation links initially
+        }
+    });
+
+    // Trigger resize event to handle the initial layout
+    window.dispatchEvent(new Event('resize'));
+    </script>
+
+</body>
+
+</html>

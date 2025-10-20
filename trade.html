@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Studio Worktops - Home</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <style>        
+        </style>
+        <body>
+            <section class="subhead">
+                <nav class="navbar">
+                    <!-- Logo image -->
+                    <div class="logo" style="overflow: hidden; position: relative; width: 200px; height: 100px; padding: 10px; flex-shrink: 0;">
+                        <a href="index.html">
+                            <img src="images/Studio Worktops Compressed Imagery/studiologo.PNG" alt="Finesse Worktops Logo" style="width: 200px; height: 100px; object-fit: cover;">
+                        </a>
+                    </div>
+            
+                    <!-- Burger Menu Icon -->
+                    <div id="burger-menu" onclick="toggleMenu()" style="cursor: pointer; font-size: 28px; padding: 10px; display: none;">
+                        <i class="fas fa-bars"></i>
+                    </div>
+            
+                    <!-- Navigation Links -->
+                    <ul id="nav-links" style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; flex-grow: 1; justify-content: center;">
+                        <li style="position: relative; margin-right: 20px; text-align: center;">
+                            <a href="index.html" style="text-decoration: none; display: inline-block; padding: 10px;">Decors</a>
+                            <div class="dropdown" style="display: none; position: absolute; top: 80%; left: 50%; transform: translateX(-50%); background-color: #afcc46; width: 180px; border-radius: 4px; overflow: hidden; text-align: center;">
+                                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                                    <li style="margin: 0; padding: 0;">
+                                        <a href="decors.html?category=round-edge" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Round Edge</a>
+                                        <a href="decors.html?category=abssquare" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Square Edge</a>                                
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="margin-right: 20px;"><a href="stylewithdurability.html" style="text-decoration: none;">Style with Durability</a></li>
+                        <li style="margin-right: 20px;"><a href="loveyourprofile.html" style="text-decoration: none;">Profiles</a></li>
+                        <li style="margin-right: 20px;"><a href="finishingtouches.html" style="text-decoration: none;">Accessories</a></li>
+                        <li style="margin-right: 20px;"><a href="care.html" style="text-decoration: none;">Care</a></li>
+                        <li style="margin-right: 20px;"><a href="specifications.html" style="text-decoration: none;">Specification</a></li>
+                        <li><a href="decors.html" style="text-decoration: none;">Order Sample</a></li>
+                    </ul>
+                </nav>
+            
+                <!-- Banner Logo (Centered) -->
+                <div class="banner-logo">
+                    <img src="images/Studio Worktops Compressed Imagery/5580 DP Chepe (Kaindl)_Main.jpg" alt="Finesse Worktops Banner" class="header-logo">
+                </div>
+            </section>
+
+    <!-- Main content -->
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="text-center">Trade Enquiry</h2>
+                <p class="text-center">If you are from the Trade and have an enquiry about Finesse worktops, please complete the form below and we’ll be in touch.</p>
+                
+                <form id="trade-enquiry-form" class="needs-validation" novalidate>
+                    <div class="row mb-4"> <!-- Increased margin-bottom -->
+                        <label for="name" class="col-sm-4 col-form-label">Name *</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                            <div id="nameError" class="text-danger" style="display: none;">This field is required.</div>
+                        </div>
+                    </div>
+            
+                    <div class="row mb-4"> <!-- Increased margin-bottom -->
+                        <label for="email" class="col-sm-4 col-form-label">Email Address *</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" placeholder="Your email address" required>
+                            <div id="emailError" class="text-danger" style="display: none;">This field is required.</div>
+                        </div>
+                    </div>
+            
+                    <div class="row mb-4"> <!-- Increased margin-bottom -->
+                        <label for="phone" class="col-sm-4 col-form-label">Phone Number</label>
+                        <div class="col-sm-8">
+                            <input type="tel" class="form-control" id="phone" placeholder="Your phone number">
+                        </div>
+                    </div>
+            
+                    <div class="row mb-4"> <!-- Increased margin-bottom -->
+                        <label for="company" class="col-sm-4 col-form-label">Company Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="company" placeholder="Your company name">
+                        </div>
+                    </div>
+            
+                    <div class="row mb-4"> <!-- Increased margin-bottom -->
+                        <label for="message" class="col-sm-4 col-form-label">How can we help?</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" id="message" rows="4" maxlength="500" placeholder="Your message"></textarea>
+                            <small class="form-text text-muted">(0 / 500)</small>
+                        </div>
+                    </div>
+            
+                    <div class="row mb-4"> <!-- Increased margin-bottom -->
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8 form-check">
+                            <input type="checkbox" class="form-check-input" id="privacy-policy" required>
+                            <label class="form-check-label" for="privacy-policy">Yes, I agree to the privacy policy.</label>
+                        </div>
+                    </div>
+            
+                    <!-- Adjusting Send Button -->
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-8 text-right">
+                            <button type="submit" style ="background-color: #afcc46;" class="btn btn-primary btn-lg btn-block">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main> 
+
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <p style="color: #fff;">&copy; 2024 Studio Worktops. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+    // Function to toggle the visibility of the navigation menu
+    function toggleMenu() {
+        var nav = document.getElementById("nav-links");
+        if (nav.style.display === "none" || nav.style.display === "") {
+            nav.style.display = "flex";  // Show the navigation links
+        } else {
+            nav.style.display = "none";  // Hide the navigation links
+        }
+    }
+
+    // Detect screen width to handle burger menu visibility
+    window.addEventListener('resize', function() {
+        var burgerMenu = document.getElementById('burger-menu');
+        var navLinks = document.getElementById('nav-links');
+        if (window.innerWidth > 768) {
+            burgerMenu.style.display = 'none';  // Hide burger icon on large screens
+            navLinks.style.display = 'flex';    // Show navigation links horizontally
+        } else {
+            burgerMenu.style.display = 'block';  // Show burger icon on small screens
+            navLinks.style.display = 'none';     // Hide navigation links initially
+        }
+    });
+
+    // Trigger resize event to handle the initial layout
+    window.dispatchEvent(new Event('resize'));
+    </script>
+
+</body>
+</html>

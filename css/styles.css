@@ -1,0 +1,1131 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 1rem;
+    margin: 0; 
+    padding: 0; 
+    background-color: #f9f9f9; 
+    color: #afcc46;
+}
+
+nav {
+    background-color: #afcc46
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0; 
+}
+
+/* General navigation styles */
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    position: relative; /* Required for dropdown positioning */
+    display: inline-block; /* Use inline-block for dropdown */
+    margin-right: 20px;
+}
+
+
+.description {
+    max-height: 100px; /* Limits the height of the description */
+    overflow: hidden; /* Hides the content that exceeds the max-height */
+    text-overflow: ellipsis; /* Shows ellipsis (...) when the text overflows */
+    transition: max-height 0.3s ease; /* Smooth transition for expanding */
+}
+
+.read-more {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+
+/* Dropdown styles */
+.dropdown {
+    display: none; 
+    position: absolute; 
+    left: 0; 
+    top: 100%; 
+    background: linear-gradient(135deg, #afcc46); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); 
+    z-index: 10; 
+    width: 800px; 
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    border-radius: 12px; 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(-10px); 
+}
+
+nav li:hover .dropdown {
+    display: flex;
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0); 
+}
+
+.dropdown > div {
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.dropdown p {
+    font-weight: bold; 
+    margin: 0 0 10px; 
+    color: #f0f0f0;
+}
+
+.dropdown li {
+    display: block; 
+    padding: 5px 0; 
+    min-width: 150px; 
+}
+
+.dropdown li a {
+    text-decoration: none; 
+    color: #e1f1f2; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    display: block; 
+    width: 100%; 
+    padding: 8px; 
+    box-sizing: border-box; 
+    border-radius: 5px; 
+}
+
+.dropdown li a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.dropdown > div p {
+    margin-left: 20px; 
+}
+
+.dropdown li {
+    padding-left: 20px; 
+}
+
+
+.header-logo {
+    width: 100%; 
+    height: 353px; 
+    object-fit: cover; 
+}
+
+.logo {
+    overflow: hidden; 
+    position: relative; 
+    max-width: 100%; 
+}
+
+nav ul li {
+    color: #ecf0f1; 
+    font-weight: bold; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1; 
+    padding: 8px 12px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff; 
+}
+
+
+footer {
+    background-color: #afcc46;
+    color: #fff; 
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px; 
+}
+
+.footer-links ul li {
+    margin: 5px 10px; 
+}
+
+.footer-links ul li a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #eeeeee; 
+}
+
+footer p {
+    margin-top: 20px; 
+    font-size: 0.9rem; 
+}
+
+section {
+    margin: 20px 0; 
+    padding: 15px; 
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    font-size: 2rem; 
+    margin: 0 0 15px 0; 
+    color: #829795; 
+    text-align: center; 
+}
+
+.subhead {
+    background-color: #afcc46;
+    text-align: center;
+    padding: 10px 0; 
+    margin: 0; 
+}
+
+.subhead ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.subhead ul li {
+    margin: 0 10px; 
+}
+
+.subhead ul li a {
+    text-decoration: none;
+    color: #fff; 
+    font-size: 1.2rem;
+    transition: color 0.3s; 
+}
+
+.subhead ul li a:hover {
+    color: #eeeeee; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    justify-content: center;
+    margin: 15px 0; 
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px; 
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; 
+    overflow: hidden; 
+    text-align: center; 
+}
+
+.card img {
+    width: 100%; /* Ensures the image takes up the full width of the card */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the entire area, maintaining aspect ratio */
+}
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    width: 250px; 
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; 
+    overflow: hidden; 
+    text-align: center; 
+    cursor: pointer; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card h4 {
+    margin: 10px 0; 
+    font-size: 1.5rem; 
+    color: #afcc46; 
+}
+
+.card .sku {
+    font-size: 0.9rem; 
+    color: #666; 
+}
+
+.card .description {
+    height: 60px; 
+    overflow: hidden; 
+}
+
+.card .look-button {
+    display: block;
+    width: calc(100% - 20px); 
+    margin: 5px auto; 
+    padding: 10px;
+    background-color: #ffffff; 
+    color: #829795; 
+    border: 1px solid #829795; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+
+.custom-button {
+    margin: 5px auto; /* Center the button with auto margin */
+    padding: 10px; /* Padding inside the button */
+    background-color: #ffffff; /* White background */
+    color: #afcc46; /* Text color */
+    border: 1px solid #afcc46; /* Border with same color as text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    text-align: left;
+}
+
+.custom-button:hover {
+    background-color: #afcc46; /* Background color on hover */
+    color: #ffffff; /* Text color changes to white on hover */
+}
+
+
+.card .look-button:hover {
+    background-color: #afcc46; 
+    color: #ffffff; 
+}
+
+.card .order-button {
+    display: block;
+    width: calc(100% - 20px); 
+    margin: 5px auto; 
+    padding: 10px;
+    background-color: #afcc46; 
+    color: #ffffff;
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.card .order-button:hover {
+    background-color: #afcc46; 
+}
+
+.contact-link .find-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #afcc46; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer; 
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; 
+    width: 100%; 
+    max-width: 250px;
+    margin: 10px auto; 
+}
+
+.contact-link .find-more-button:hover {
+    background-color: #afcc46; 
+    color: #ffffff; 
+    
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; 
+}
+
+.gallery img:hover {
+    transform: scale(1.05); 
+}
+
+
+.container {
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 40px; 
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+h2, p {
+    margin-bottom: 30px; 
+    color: #afcc46;
+}
+
+.row {
+    padding: 10px 0; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+}
+
+.pagination span {
+    color: #829795; 
+    font-weight: bold; 
+}
+
+.pagination-links {
+    display: flex; 
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #829795; 
+    padding: 8px 12px; 
+    margin: 0 5px; 
+    border: 1px solid transparent; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.pagination a:hover {
+    background-color: #829795; 
+    color: white; 
+    border: 1px solid #829795; 
+}
+
+.pagination span {
+    display: flex;
+    align-items: center; 
+    padding: 8px 12px; 
+    color: #333; 
+}
+
+
+input.form-control, 
+textarea.form-control {
+    padding: 5px; 
+    font-size: 16px; 
+    width: 100%; 
+    max-width: 500px; 
+    box-sizing: border-box; 
+}
+
+
+.btn-primary {
+    background-color: #000; 
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px; 
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #829795; 
+}
+
+textarea {
+    resize: none;
+}
+
+.invalid-feedback {
+    font-size: 14px;
+}
+
+  /* Modal Styles */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Form Grid Styles */
+.modal-body form {
+display: grid;
+grid-template-columns: 1fr 2fr; /* Two columns, labels take 1/3 width and inputs take 2/3 */
+gap: 10px;
+}
+
+.modal-body label {
+text-align: right;
+padding-right: 10px;
+align-self: center; /* Vertically align labels with inputs */
+}
+
+.modal-body .form-control {
+width: 100%;
+box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.modal-footer {
+display: flex;
+justify-content: flex-end;
+margin-top: 15px;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+/* Form styles */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    margin: 20px; /* Margin around the product container */
+}
+.product-image {
+    flex: 1; /* Allows the image to take up proportional space */
+    max-width: 50%; /* Sets the maximum width of the image */
+}
+.product-details {
+    flex: 1; /* Allows the text section to take up proportional space */
+    margin-left: 20px; /* Space between the image and text */
+}
+.product-image img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+ /* Add styles for dropdown FAQ */
+ .faq-section {
+    margin: 20px 0;
+}
+
+.faq {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    display: none;
+    padding: 10px;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.arrow.up {
+    transform: rotate(180deg);
+}
+
+#related-products {
+    margin-top: 40px; /* Space above the section */
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height as needed */
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item {
+    min-width: 100%; /* Each item takes full width */
+    height: auto; /* Auto height based on content */
+    display: flex;
+    justify-content: center; /* Center the card */
+}
+
+.card {
+    background-color: #fff; /* Card background color */
+    border: 1px solid #ccc; /* Card border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    text-align: center; /* Center text inside the card */
+    width: 300px; /* Fixed width for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 0 10px; /* Space between cards */
+}
+
+
+.look-button,
+.order-button {
+    margin-top: 10px; /* Space above buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.look-button {
+    background-color: #007BFF; /* Button color */
+    color: #fff; /* Text color */
+}
+
+.order-button {
+    background-color: #28a745; /* Button color */
+    color: #fff; /* Text color */
+}
+
+.bullet-points {
+    text-align: center;
+    margin-top: 10px; /* Space above bullet points */
+}
+
+.bullet {
+    display: inline-block;
+    width: 10px; /* Bullet width */
+    height: 10px; /* Bullet height */
+    background-color: #ccc; /* Inactive bullet color */
+    border-radius: 50%; /* Circular shape */
+    margin: 0 5px; /* Space between bullets */
+    cursor: pointer;
+}
+
+.bullet.active {
+    background-color: #333; /* Active bullet color */
+}
+
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ensure all sections and containers fit within the viewport */
+    section, .center-content, .container, .product-grid, .gallery, .card-container, .content-container, .text-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 15px; /* Consistent padding */
+    }
+
+    /* Fix flexbox elements from expanding too wide */
+    nav ul, .footer-links ul, .subhead ul {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Ensure no extra margin or padding is pushing elements out */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Adjusting product grid for smaller screens */
+    .product-grid {
+        grid-template-columns: 1fr;  /* Stack items in a single column */
+        padding: 0 10px;
+    }
+
+    /* Stack navigation items vertically */
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    /* Adjust navigation item spacing */
+    nav li {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust section padding and margin for mobile */
+    section {
+        margin: 10px 0;
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Logo adjustments for smaller screens */
+    .header-logo {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Make buttons responsive */
+    .custom-button,
+    .look-button,
+    .order-button,
+    .find-more-button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    /* Adjust card layout for mobile */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    /* Adjust card size for mobile */
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 15px 0;
+        box-sizing: border-box;
+    }
+
+    /* Adjust gallery layout for mobile */
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    /* Responsive text sizes */
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .subhead ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ensure images scale properly without being cut off */
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* Ensures flexbox containers stack properly */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Add responsiveness for tables */
+    .responsive-table {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    /* Make sure the table is not full-width */
+    table {
+        width: auto; /* Don't stretch to full width */
+        max-width: 90%; /* Limit the width to 90% of its parent container */
+        margin: 0 auto; /* Center the table */
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* Adjust table header for mobile */
+    table th {
+        font-size: 1rem;
+    }
+
+    /* Ensure tables have proper spacing */
+    table td {
+        font-size: 0.9rem;
+    }
+
+    /* Ensure the header stays readable */
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    #burger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 28px; /* Adjust icon size */
+        color: #000; /* Adjust icon color, you can set this to any color you want */
+    }
+    
+    /* Optional: Adjust the icon size */
+    #burger-menu i {
+        font-size: 28px; /* This makes the icon bigger or smaller */
+        color: #000; /* Adjust color to match your design */
+    }
+    
+    
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Button adjustments for smaller screens */
+    .custom-button,
+    .look-button,
+    .order-button,
+    .find-more-button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+}
+
+
+.subhead {
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+/* Logo Styling */
+.logo {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Burger Menu Icon */
+#burger-menu {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    margin-left: auto; /* Align burger icon to the right */
+}
+
+#burger-menu i {
+    color: #fff; /* Set icon color to white */
+}
+
+/* Navigation Links */
+#nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#nav-links li {
+    margin-right: 20px;
+    position: relative;
+}
+
+#nav-links a {
+    text-decoration: none;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #afcc46;
+    padding: 20px;
+    width: 800px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+}
+
+#nav-links li:hover .dropdown {
+    display: block;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    margin-bottom: 10px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Banner Logo */
+.banner-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subhead {
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+/* Logo Styling */
+.logo {
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Burger Menu Icon */
+#burger-menu {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    margin-left: auto; /* Align burger icon to the right */
+}
+
+#burger-menu i {
+    color: #fff; /* Set icon color to white */
+}
+
+/* Navigation Links */
+#nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#nav-links li {
+    margin-right: 20px;
+    position: relative;
+}
+
+#nav-links a {
+    text-decoration: none;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #afcc46;
+    padding: 20px;
+    width: 800px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+}
+
+#nav-links li:hover .dropdown {
+    display: block;
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown li {
+    margin-bottom: 10px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Banner Logo */
+.banner-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Initially hide the nav links on mobile */
+    #nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* Hide navigation by default on mobile */
+        width: 100%;
+    }
+
+    #nav-links li {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    #burger-menu {
+        display: block; /* Show burger icon on mobile */
+    }
+
+    #nav-links.show {
+        display: flex; /* Show nav links when the menu is toggled */
+        background-color: #fff; /* Background for the mobile menu */
+        position: absolute;
+        top: 60px; /* Adjust position for the menu */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 9999; /* Make sure the menu is on top of other content */
+    }
+
+    .dropdown {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* Hide burger menu on larger screens (greater than 768px) */
+@media (min-width: 769px) {
+    /* Explicitly hide the burger menu on larger screens */
+    #burger-menu {
+        display: none !important; /* Ensure the burger menu is hidden */
+    }
+
+    #nav-links {
+        display: flex; /* Display navigation links on larger screens */
+        justify-content: flex-end;
+    }
+}
+

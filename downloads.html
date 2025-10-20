@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Worktops - Downloads</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+
+a {
+    text-decoration: none; /* Remove underline from all links */
+}
+
+
+    /* General navigation styles */
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* List items */
+    nav li {
+        position: relative; /* Required for dropdown positioning */
+        display: inline-block; /* Use inline-block for dropdown */
+        margin-right: 20px;
+    }
+    
+    /* Dropdown styles */
+    .dropdown {
+        display: none; /* Hide the dropdown initially */
+        position: absolute; /* Position it relative to the parent */
+        left: 0; /* Align with the parent */
+        top: 100%; /* Position it right below the parent */
+        background-color: white; /* Background color for dropdown */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        z-index: 10; /* Ensure dropdown appears above other content */
+        width: 600px; /* Fixed width for dropdown */
+        padding: 10px; /* Add padding to dropdown */
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+    
+    /* Show dropdown on hover */
+    nav li:hover .dropdown {
+        display: flex; /* Show the dropdown on hover */
+    }
+    
+    /* Dropdown item styles */
+    .dropdown > div {
+        flex: 1; /* Equal width for columns */
+        padding: 10px; /* Add some padding */
+    }
+    
+    /* Column header styles */
+    .dropdown p {
+        font-weight: bold; /* Bold for headers */
+        margin: 0 0 5px; /* Margin below headers */
+    }
+    
+    /* Individual item styles */
+    .dropdown li {
+        display: block; /* Display dropdown items as block */
+        padding: 5px 0; /* Add padding */
+    }
+    
+    .dropdown li a {
+        text-decoration: none; /* Remove underline */
+        color: black; /* Set text color */
+    }
+    
+    /* Cover photo styles */
+    .cover-photo {
+        position: relative; /* Set position if not already set */
+        z-index: 1; /* Set a lower z-index than the dropdown */
+    }
+    
+    
+    </style>
+    <body>
+        <section class="subhead">
+            <nav class="navbar">
+                <!-- Logo image -->
+                <div class="logo" style="overflow: hidden; position: relative; width: 200px; height: 100px; padding: 10px; flex-shrink: 0;">
+                    <a href="index.html">
+                        <img src="images/Studio Worktops Compressed Imagery/studiologo.PNG" alt="Finesse Worktops Logo" style="width: 200px; height: 100px; object-fit: cover;">
+                    </a>
+                </div>
+        
+                <!-- Burger Menu Icon -->
+                <div id="burger-menu" onclick="toggleMenu()" style="cursor: pointer; font-size: 28px; padding: 10px; display: none;">
+                    <i class="fas fa-bars"></i>
+                </div>
+        
+                <!-- Navigation Links -->
+                <ul id="nav-links" style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; flex-grow: 1; justify-content: center;">
+                    <li style="position: relative; margin-right: 20px; text-align: center;">
+                        <a href="index.html" style="text-decoration: none; display: inline-block; padding: 10px;">Decors</a>
+                        <div class="dropdown" style="display: none; position: absolute; top: 80%; left: 50%; transform: translateX(-50%); background-color: #afcc46; width: 180px; border-radius: 4px; overflow: hidden; text-align: center;">
+                            <ul style="list-style-type: none; padding: 0; margin: 0;">
+                                <li style="margin: 0; padding: 0;">
+                                    <a href="decors.html?category=round-edge" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Round Edge</a>
+                                    <a href="decors.html?category=abssquare" style="color: white; padding: 8px 10px; display: block; text-decoration: none; text-align: center;">Square Edge</a>                                
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    <li style="margin-right: 20px;"><a href="stylewithdurability.html" style="text-decoration: none;">Style with Durability</a></li>
+                    <li style="margin-right: 20px;"><a href="loveyourprofile.html" style="text-decoration: none;">Profiles</a></li>
+                    <li style="margin-right: 20px;"><a href="finishingtouches.html" style="text-decoration: none;">Accessories</a></li>
+                    <li style="margin-right: 20px;"><a href="care.html" style="text-decoration: none;">Care</a></li>
+                    <li style="margin-right: 20px;"><a href="specifications.html" style="text-decoration: none;">Specification</a></li>
+                    <li><a href="decors.html" style="text-decoration: none;">Order Sample</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Banner Logo (Centered) -->
+            <div class="banner-logo">
+                <img src="images/Studio Worktops Compressed Imagery/5580 DP Chepe (Kaindl)_Main.jpg" alt="Finesse Worktops Banner" class="header-logo">
+            </div>
+        </section>
+
+    <!-- Main content -->
+    <main>
+        <section id="downloads">
+            <h2>Downloads</h2>        
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/Swatch/Finesse-Brochure-scaled.jpg" alt="Wood Decor 1">
+                    <h4>Brochure</h4>
+                    <a href="images/04/Finesse-Brochure_V4-2024.pdf" download>
+                        <button class="order-button">Download</button>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="images/Swatch/Finesse-Guarantee-1024x768.jpg" alt="Wood Decor 2">
+                    <h4>Guarantee</h4>
+                    <a href="images/06/Finesse-Guarantee-2024.pdf" download>
+                        <button class="order-button">Download</button>
+                    </a>
+                </div>
+                <div class="card">
+                    <img src="images/Swatch/Finesse-Instructions-scaled.jpg" alt="Wood Decor 3">
+                    <h4>Installation Leaflet</h4>
+                    <a href="images/2023/11/Compact-Laminate-Worktops-Installation-Leaflet.pdf" download>
+                        <button class="order-button">Download</button>
+                    </a>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+            
+            
+        </section>
+    </main> 
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <p style="color: #fff;">&copy; 2024 Studio Worktops. All rights reserved.</p>
+    </footer>
+
+</body>
+<script src="js/scripts.js"></script>
+</html>

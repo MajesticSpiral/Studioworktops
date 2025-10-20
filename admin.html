@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Worktops - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Basic reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Centering container */
+        body {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center;    /* Centers vertically */
+            background-color: #f4f4f4; /* Optional background color */
+            font-family: Arial, sans-serif; /* Optional font */
+        }
+
+        .main-content {
+            text-align: center; /* Center text inside the content */
+            background: #fff;   /* Optional background for the card */
+            padding: 20px;      /* Add some padding */
+            border-radius: 8px; /* Optional rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            max-width: 400px;   /* Limit content width */
+            width: 100%;        /* Make it responsive */
+        }
+
+        .custom-button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #afcc46;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .custom-button:hover {
+            background-color: #afcc46;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        /* Logout button styling */
+        #logout-btn {
+            position: absolute; /* Position relative to the body */
+            top: 10px;          /* Distance from the top */
+            right: 10px;        /* Distance from the right */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #dc3545; /* Red button */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        #logout-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Logout button -->
+    <button id="logout-btn" class="custom-button" onclick="logout()">Logout</button>
+
+    <!-- Main content -->
+    <div class="main-content">
+        
+        <h3 style="color: #afcc46;">Download Orders</h3>
+        <button id="download-all-csv" class="custom-button">All Orders</button>
+        <button id="download-3-days-csv" class="custom-button">Last 3 Days</button>
+    </div>
+
+    <script>
+        // Event listeners for the download buttons
+        document.getElementById('download-all-csv').addEventListener('click', function() {
+            window.location.href = '/api/download-all-csv';  // Server route for downloading all data
+        });
+
+        document.getElementById('download-3-days-csv').addEventListener('click', function() {
+            window.location.href = '/api/download-csv';  // Server route for downloading data from last 3 days
+        });
+
+        // Logout function to make a POST request to /api/logout
+        function logout() {
+            // Make a POST request to the logout route
+            fetch('/api/logout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Logout successful');
+                    // Redirect to the login page after a successful logout
+                    window.location.href = 'login.html';
+                } else {
+                    console.log('Logout failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error during logout:', error);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Studio Worktops</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+
+    body {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9; /* Light grayish background */
+        color: #afcc46; /* Soft grayish-green text color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Container styles */
+    .login-container {
+        background-color: #fff; /* White background for the form */
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #afcc46; /* Soft grayish-green heading */
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    /* Form and input field styles */
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    label {
+        font-size: 16px;
+        color: #afcc46; /* Soft grayish-green for labels */
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+    }
+
+    .input-field:focus {
+        border-color: #829795; /* Soft green border on focus */
+    }
+
+    /* Submit button styles */
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #afcc46; /* Soft green background for the button */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #afcc46; /* Slightly darker green on hover */
+    }
+
+    /* Footer styles */
+    .footer-links {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #829795;
+    }
+
+    .footer-links p {
+        margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .login-container {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .input-field {
+            font-size: 14px;
+        }
+
+        button[type="submit"] {
+            font-size: 16px;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/api/login" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="input-field" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="input-field" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+   
+
+</body>
+</html>
