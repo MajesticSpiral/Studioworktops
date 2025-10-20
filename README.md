@@ -9,11 +9,6 @@ A modern, responsive website for **Studio Worktops**, showcasing a wide range of
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
-
 ---
 
 ## About
